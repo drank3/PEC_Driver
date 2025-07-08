@@ -1,0 +1,23 @@
+format_version=2.3
+OUTPUT=Multi-Script.txt
+OUTPUT_CHK=True
+COMMENTS=
+cmdRepeat 1
+cmdNewPlot 
+cmdMeasure False%poleChronoA-0DC-30s.psmethod%poleFalse%poleFalse%pole%pole%poleFalse%poleFalse%pole%pole%poleFalse%pole1
+EndOfSubBlock
+cmdMeasure False%poleChronoA-0_1DC-30s.psmethod%poleFalse%poleFalse%pole%pole%poleFalse%poleFalse%pole%pole%poleFalse%pole1
+EndOfSubBlock
+cmdMeasure False%poleChronoA-_-0_1DC-30s.psmethod%poleFalse%poleFalse%pole%pole%poleFalse%poleFalse%pole%pole%poleFalse%pole1
+EndOfSubBlock
+cmdMeasure False%poleOC_Pot_15s.psmethod%poleFalse%poleFalse%pole%pole%poleFalse%poleFalse%pole%pole%poleFalse%pole1
+EndOfSubBlock
+cmdMeasure False%poleLSV-_-0_5_t_0_5-50mV.psmethod%poleFalse%poleFalse%pole%pole%poleFalse%poleFalse%pole%pole%poleFalse%pole1
+EndOfSubBlock
+cmdMeasure False%poleCV_-1_t_1_100mV%20-%20Dark.psmethod%poleFalse%poleFalse%pole%pole%poleFalse%poleFalse%pole%pole%poleFalse%pole1
+EndOfSubBlock
+cmdMeasure False%poleCV_-1_t_1_100mV%20-%20Light.psmethod%poleFalse%poleFalse%pole%pole%poleFalse%poleFalse%pole%pole%poleFalse%pole1
+EndOfSubBlock
+cmdMeasure False%poleChronoA-0DC-30s.psmethod%poleFalse%poleFalse%pole%pole%poleFalse%poleTrue%pole%pole..\..\..\..\Documents\%poleFalse%pole1
+EndOfSubBlock
+EndOfSubBlock

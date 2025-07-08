@@ -1,0 +1,10 @@
+format_version=2.3
+OUTPUT=Multi-Script.txt
+OUTPUT_CHK=True
+COMMENTS=
+cmdNewPlot 
+cmdRepeat 7
+cmdMeasure False%poleChronoA-0DC-30s.psmethod%poleFalse%poleFalse%pole%pole%poleFalse%poleFalse%pole%pole%poleFalse%pole1
+EndOfSubBlock
+cmdWait 15.0|0|0|0||0|False
+EndOfSubBlock
