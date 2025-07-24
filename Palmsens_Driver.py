@@ -89,8 +89,6 @@ class Palmsens_Driver:
             results = self.instr.measure(method)
 
             data = np.array([results.time_arrays, results.current_arrays])
-            print(data.shape)
-            print(results.current_arrays)
 
             return data[:, 0, :].T
 

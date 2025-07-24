@@ -205,7 +205,9 @@ class Data_Analyzer:
                             target_pixels=[1, 2, 3, 4])
         pg.CA_Overlay_Tiled(time_df.iloc[0:50], avg_traces, save_path=image_2, color_by='Wavelength', tile_by="Pixel",
                             target_pixels=[1, 2, 3, 4])
-        pg.CA_Bar_Graph(compiled_cur_sums, save_path=image_3)
+        final_summary = pg.CA_Bar_Graph(compiled_cur_sums, save_path=image_3)
+
+        final_summary.to_csv(os.path.dirname(summary_path) + "\\" + "CA_Averages.csv")
 
         return [image_1, image_2, image_3]
     def Analyze_CV_Summary(self, summary_path, image_path=None):
@@ -366,7 +368,6 @@ class Data_Analyzer:
 
 if __name__ == "__main__":
     # Set the directory where your CSV files are located
-    data_folder = r"C:\Users\Daniel\Box\Research\Data\PEC\n_Si_1,25m-PEALD_TiOx_15C-iSi_A2_4,45m-pSi_1,25"
 
     da = Data_Analyzer()
 

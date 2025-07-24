@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
+import pandas as pd
 
 
 def CA_Overlay_Tiled(time_df, cur_df, save_path, color_by='Pixel', tile_by="Wavelength", target_pixels=[1, 2, 3, 4],
@@ -90,7 +91,7 @@ def CA_Overlay_Tiled(time_df, cur_df, save_path, color_by='Pixel', tile_by="Wave
     if save_path == None:
         fig.show()
     else:
-        fig.savefig(save_path)
+        fig.savefig(save_path, dpi=600)
         plt.close()
 
 
@@ -163,9 +164,15 @@ def CA_Bar_Graph(compiled_cur_sums, save_path, pixel_area=.09, colorblind=False)
     if save_path == None:
         fig.show()
     else:
-        fig.savefig(save_path)
+        fig.savefig(save_path, dpi=600)
         plt.close()
 
+    final_summary = pd.DataFrame()
+    final_summary['Averages'] = average_current_densities
+    final_summary['Errors'] = average_errors
+    final_summary['Wavelength'] = wavelength_array
+
+    return final_summary
 
 def CV_CSC_Bar_Graph(headers, data_array, title):
     pass
@@ -287,7 +294,7 @@ def CV_Overlay_Tiled(potential_array, current_df, save_path, all_scans=False, da
         fig.show()
     else:
         fig.show()
-        fig.savefig(save_path)
+        fig.savefig(save_path, dpi=600)
         plt.close()
 
 
@@ -377,7 +384,7 @@ def OCP_Overlay_Tiled(time_df, potential_df, save_path, color_by='Pixel', tile_b
     if save_path is None:
         fig.show()
     else:
-        fig.savefig(save_path)
+        fig.savefig(save_path, dpi=600)
         plt.close()
 
 

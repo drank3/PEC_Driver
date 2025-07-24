@@ -4,12 +4,16 @@ import time
 import numpy as np
 import os
 
-sample_name = "n_(n)3DFG-iSi_A2_8,46m-pSi_1,25"
+#CHANGE_HERE: Change the name below to match your sample
+sample_name = "Ti-SnSx_1"
+
+#CHANGE_HERE: Change the below path to your desired location to save the data folder
 save_path = r"C:\Users\Daniel\Box\Research\Data\PEC"
 class Central_Driver:
     def __init__(self):
         self.arduino_instance = Arduino_Driver()
 
+        #CHANGE_HERE: There should be a methods folder in the main directory of this repo, change the below path to go there
         self.palmsens_instance = Palmsens_Driver(r"C:\Users\Daniel\Box\Research\\Software\PEC_Driver\Methods_Directory")
 
         #Creating the save directory for all the data below
@@ -20,6 +24,9 @@ class Central_Driver:
             pass
         self.data_directory = save_path+r"\\"+sample_name
 
+        #TODO: Make the process to search for the Arduino more elegant
+
+        #CHANGE_HERE: After locating it with the device manager, enter the correct COM channel for the Arduino below
         self.arduino_instance.initiateConnection("COM4")
         time.sleep(12)
 
